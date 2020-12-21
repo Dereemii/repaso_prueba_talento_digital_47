@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Course from '@/views/Course.vue'
+import Login from '@/views/Login.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -16,6 +17,11 @@ const routes = [
     component: Course,
     props:true,
 
+  },
+  {
+    path: '/login',
+    name: "Login",
+    component: Login,
   },
   {
     path: '/about',
