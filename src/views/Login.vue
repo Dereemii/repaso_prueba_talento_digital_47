@@ -3,6 +3,8 @@
     <v-row justify="center">
       <v-col md="6">
         <h1>Login</h1>
+        <h2>user: user@user.cl</h2>
+        <h2>pass: 123456</h2>
         <v-card>
           <v-form ref="form" v-model="valid" lazy-validation>
         
