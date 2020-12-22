@@ -1,8 +1,12 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import firebase from 'firebase'
 import Home from '../views/Home.vue'
 import Course from '@/views/Course.vue'
 import Login from '@/views/Login.vue'
+import Admin from '@/views/Admin.vue'
+import UpdateCourse from '@/views/UpdateCourse.vue'
+import CreateCourse from '@/views/CreateCourse.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -24,6 +28,30 @@ const routes = [
     component: Login,
   },
   {
+    path: '/admin',
+    name: "Admin",
+    component: Admin,
+    meta:{
+      autenticado:true,
+    }
+  },
+  {
+    path: '/admin/curso/:id',
+    name: "Update",
+    component:UpdateCourse,
+    meta:{
+      autenticado:true
+    }
+  },
+  {
+    path:'/crear',
+    name: "CreateCourse",
+    component: CreateCourse,
+    meta:{
+      autenticado:true
+    }
+  },
+  {
     path: '/about',
     name: 'About',
     // route level code-splitting
@@ -37,6 +65,22 @@ const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
   routes
+})
+
+router.beforeEach((to,from,next)=>{
+  let user = firebase.auth().currentUser;
+  console.log(to)
+  let private_rute = to.matched.some(record=> record.meta.autenticado)
+
+  if(private_rute && !user){
+    next('/login')
+  }
+  else if(!private_rute && user){
+    next('/admin')
+  }
+  else{
+    next();
+  }
 })
 
 export default router

@@ -1,8 +1,8 @@
 <template>
   <div>
-    <div class="banner">
+    <!-- <div class="banner">
       <h1>Live Coding</h1>
-    </div>
+    </div> -->
     <v-container>
       <v-row>
         <v-col v-for="course in courses" :key="course.id" md="4">
@@ -20,7 +20,7 @@
             </v-card-subtitle>
 
             <v-card-actions>
-              <v-btn color="orange" text @click="redirect(course.id)">
+              <v-btn color="orange" text @click="redirect(course.id)" v-text="typeGallery=='public' ? 'visitar': 'editar' ">
                 Visitar
               </v-btn>
 
@@ -36,13 +36,19 @@
 import { mapState } from "vuex";
 export default {
   name: "CourseGallery",
+  props:{
+    typeGallery:{
+      type: String,
+      default:"public"
+    }
+  },
   computed: {
     ...mapState(["courses"]),
   },
   methods:{
     redirect(id){
-     
-      this.$router.push(`/curso/${id}`)
+      if(this.typeGallery === "public") this.$router.push(`/curso/${id}`)
+      else if(this.typeGallery ==="admin") this.$router.push(`/admin/curso/${id}`)
     }
   }
 };
