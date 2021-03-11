@@ -1,27 +1,22 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import axios from 'axios'
+
 Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    courses:[],
+    username:"",
+    token:null,
   },
   mutations: {
-    GET_COURSES(state, arrCourses){
-      state.courses = arrCourses;
+    SET_USER_DATA:(state, data)=>{
+      state.username = data.username;
+      state.token = data.token;
     }
   },
   actions: {
-    getCourses({commit}){
-      axios.get("https://us-central1-ottoklauss-5927c.cloudfunctions.net/api/courses")
-        .then(resp=>{
-          console.log(resp);
-          commit('GET_COURSES', resp.data)
-        })
-        .catch(error=>{
-          console.log(error);
-        })
+    setUserData: ({commit}, data)=>{
+      commit('SET_USER_DATA',data);
     }
   },
   modules: {

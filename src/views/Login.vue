@@ -51,7 +51,8 @@
 </template>
 
 <script>
-import firebase from 'firebase';
+import axios from 'axios';
+import {mapActions} from 'vuex';
 export default {
   name: "LoginComponent",
   data: function(){
@@ -67,6 +68,7 @@ export default {
     }
   },
   methods:{
+    ...mapActions(['setUserData']),
     validate () {
         return this.$refs.form.validate()
     },
@@ -77,16 +79,22 @@ export default {
       //guardia
       if(this.validate() === false) return
 
-      firebase.auth().signInWithEmailAndPassword(this.email, this.pass)
+      axios.get('http://localhost:8080/api/login.json')
         .then(resp=>{
-          console.log(resp)
-          this.$router.push('/admin');
+          console.log(resp.data)
+          let user = resp.data;
+          if(user.email == this.email && user.pass == this.pass){
+            this.setUserData(user);
+            this.$router.push('/');
+            this.userFind = true;
+          }
+          else{
+            this.userFind = false;
+          }
         })
         .catch(error=>{
           console.log(error)
-          this.userFind = false;
         })
-
       
     }
   }

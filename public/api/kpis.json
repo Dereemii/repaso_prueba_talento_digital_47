@@ -1,0 +1,14 @@
+[
+  {
+    "venta_mensual": {
+      "valor": 500,
+      "meta": 1500
+    }
+  },
+  {
+    "venta_anual": {
+      "valor": 7520,
+      "meta": 15000
+    }
+  }
+]

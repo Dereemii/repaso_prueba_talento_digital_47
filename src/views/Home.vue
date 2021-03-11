@@ -1,17 +1,33 @@
 <template>
-  <div class="home">
-    <CoursesGallery></CoursesGallery>
+  <div>
+    <h3>home</h3>
+    <v-container>
+      <v-row>
+        <v-col>
+          <Jumbo></Jumbo>
+        </v-col>
+      </v-row>
+      <v-row>
+        <v-col>
+          <VentaMensual></VentaMensual>
+        </v-col>
+        <v-col>
+          <VentaMensual></VentaMensual>
+        </v-col>
+      </v-row>
+    </v-container>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import CoursesGallery from "@/components/CoursesGallery.vue"
-
+import Jumbo from '@/components/home/Jumbo.vue'
+import VentaMensual from '@/components/home/VentaMensual.vue'
 export default {
   name: 'Home',
   components: {
-    CoursesGallery
+    Jumbo,
+    VentaMensual,
   }
 }
 </script>
