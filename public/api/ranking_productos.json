@@ -1,0 +1,22 @@
+[
+  {
+    "cod_producto": "54321",
+    "producto": "Placa Madre ASUS TX440",
+    "unidades": 137
+  },
+  {
+    "cod_producto": "54320",
+    "producto": "Procesador Intel i3 E440",
+    "unidades": 122
+  },
+  {
+    "cod_producto": "54301",
+    "producto": "SSD Western Digital 3 TB",
+    "unidades": 98
+  },
+  {
+    "cod_producto": "53433",
+    "producto": "Corsair RAM 32 GB Dual TX",
+    "unidades": 95
+  }
+]

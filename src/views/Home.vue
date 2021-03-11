@@ -1,5 +1,6 @@
 <template>
   <div>
+    <NavBarAdmin></NavBarAdmin>
     <h3>home</h3>
     <v-container>
       <v-row>
@@ -12,7 +13,15 @@
           <VentaMensual></VentaMensual>
         </v-col>
         <v-col>
-          <VentaMensual></VentaMensual>
+          <VentaAnual></VentaAnual>
+        </v-col>
+      </v-row>
+      <v-row>
+        <v-col>
+          <RankingVendedores></RankingVendedores>
+        </v-col>
+        <v-col>
+          <RankingProductos></RankingProductos>
         </v-col>
       </v-row>
     </v-container>
@@ -23,11 +32,19 @@
 // @ is an alias to /src
 import Jumbo from '@/components/home/Jumbo.vue'
 import VentaMensual from '@/components/home/VentaMensual.vue'
+import VentaAnual from '@/components/home/VentaAnual.vue'
+import RankingVendedores from '@/components/home/RankingVendedores.vue'
+import RankingProductos from '@/components/home/RankingProductos.vue'
+import NavBarAdmin from '@/components/AdminNavbar.vue'
 export default {
   name: 'Home',
   components: {
     Jumbo,
     VentaMensual,
+    VentaAnual,
+    RankingVendedores,
+    RankingProductos,
+    NavBarAdmin,
   }
 }
 </script>

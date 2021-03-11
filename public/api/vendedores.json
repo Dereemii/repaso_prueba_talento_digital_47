@@ -1,0 +1,30 @@
+{
+  "vendedores": [
+    {
+      "id_vendedor": 2334,
+      "nombre": "Boris Borquez",
+      "venta_unid": 160,
+      "venta_pesos": 1540000,
+      "meta_venta": 1500000
+    },
+    {
+      "id_vendedor": 2443,
+      "nombre": "Rosita Rosas",
+      "venta_unid": 45,
+      "venta_pesos": 980000,
+      "meta_venta": 1500000
+    },
+    {
+      "id_vendedor": 2353,
+      "nombre": "Daniel Davila",
+      "venta_unid": 120,
+      "venta_pesos": 43000,
+      "meta_venta": 1200000
+    }
+  ],
+  "pagedResult": {
+    "page": 1,
+    "size": 10,
+    "total": 4
+  }
+}

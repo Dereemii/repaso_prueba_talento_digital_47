@@ -1,0 +1,26 @@
+[
+  {
+    "id_vendedor": 2213,
+    "nombre": "Matias Matamala",
+    "monto": 7357213,
+    "unidades": 237
+  },
+  {
+    "id_vendedor": 2211,
+    "nombre": "Rosita Rosas",
+    "monto": 6980233,
+    "unidades": 221
+  },
+  {
+    "id_vendedor": 2145,
+    "nombre": "Daniel Davila",
+    "monto": 5553233,
+    "unidades": 189
+  },
+  {
+    "id_vendedor": 2536,
+    "nombre": "Boris Borquez",
+    "monto": 5123367,
+    "unidades": 182
+  }
+]

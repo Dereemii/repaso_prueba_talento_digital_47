@@ -1,0 +1,66 @@
+{
+  "vendedor": {
+    "id": 2334,
+    "nombre": "Bernardo Bernales",
+    "email": "bbernales@worldparts.com",
+    "fono": "+56 22 234 4332",
+    "oficina": "Santiago",
+    "Manager": "Miguel Fernandez"
+  },
+  "cartera": [
+    {
+      "id_cliente": "3221",
+      "nombre": "Top Tech LTDA",
+      "Segmento": "A",
+      "venta": "1220000",
+      "meta": "1000000"
+    },
+    {
+      "id_cliente": "3224",
+      "nombre": "Electronica Casa Real LTDA",
+      "Segmento": "AA",
+      "venta": "450000",
+      "meta": "1000000"
+    },
+    {
+      "id_cliente": "3342",
+      "nombre": "Computech LTDA",
+      "Segmento": "B",
+      "venta": "240000",
+      "meta": "600000"
+    },
+    {
+      "id_cliente": "2442",
+      "nombre": "Casa del PC LTDA",
+      "Segmento": "B",
+      "venta": "530000",
+      "meta": "600000"
+    }
+  ],
+  "cumplimiento": [
+    {
+      "periodo": "Ene/2020",
+      "venta_unidades": 1540,
+      "venta_pesos": 4320000,
+      "meta": 4000000
+    },
+    {
+      "periodo": "Feb/2020",
+      "venta_unidades": 980,
+      "venta_pesos": 3380000,
+      "meta": 4000000
+    },
+    {
+      "periodo": "Mar/2020",
+      "venta_unidades": 2400,
+      "venta_pesos": 4131000,
+      "meta": 6000000
+    },
+    {
+      "periodo": "Abr/2020",
+      "venta_unidades": 1740,
+      "venta_pesos": 6150000,
+      "meta": 6000000
+    }
+  ]
+}
